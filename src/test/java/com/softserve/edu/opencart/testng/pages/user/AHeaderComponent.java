@@ -1,4 +1,4 @@
-package com.softserve.edu.opencart.testng.user;
+package com.softserve.edu.opencart.testng.pages.user;
 
 import java.util.List;
 
