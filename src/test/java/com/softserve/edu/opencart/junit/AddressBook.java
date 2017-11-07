@@ -1,4 +1,4 @@
-package com.softserve.edu.opencart;
+package com.softserve.edu.opencart.junit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

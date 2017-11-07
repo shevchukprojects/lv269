@@ -1,13 +1,11 @@
-package com.softserve.edu.opencart;
+package com.softserve.edu.opencart.junit;
 
-import com.softserve.edu.opencart.AddressBook;
+import com.softserve.edu.opencart.junit.AddressBook;
 import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
-import static com.sun.xml.internal.ws.dump.LoggingDumpTube.Position.Before;
 
 public class EditAddressBookTest {
     private static WebDriver driver;
