@@ -25,7 +25,6 @@ public class SelenRes {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("http://regres.herokuapp.com/login");
         //
-        //Thread.sleep(5000);
         WebElement login = driver.findElement(By.id("login"));
         login.clear();
         login.click();
