@@ -37,7 +37,7 @@ hs_err_pid*
 /bin/
 /build/
 /doc/
-/tests-output/
+/test-output/
 /.classpath
 /.project
 /.checkstyle
@@ -52,7 +52,7 @@ hs_err_pid*
 /**/doc/
 /**/bin/
 /**/build/
-/**/tests-output/
+/**/test-output/
 /**/report/
 /**/.classpath
 /**/.project
@@ -83,6 +83,7 @@ hs_err_pid*
 
 # Ignore .doc .pfd .docx
 *.doc
+*.docx
 *.pdf
 
 # bower
