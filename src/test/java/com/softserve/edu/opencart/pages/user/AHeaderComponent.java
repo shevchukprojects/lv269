@@ -77,7 +77,7 @@ abstract class AHeaderComponent {
         // TODO
         MENUTOP_OPTIONS_CSS ("li:has(a:contains('%s')) li > a"),
         MENUTOP_LAST_OPTION_CSS ("li:has(a:contains('%s')) div > a");
-        //
+
         private String field;
 
         private AHeaderComponentLocators(String field) {
@@ -120,11 +120,19 @@ abstract class AHeaderComponent {
         currency = driver.findElement(By.cssSelector(".btn.btn-link.dropdown-toggle"));
         myAccount = driver.findElement(By.cssSelector(".list-inline > li > a.dropdown-toggle"));
         wishList = driver.findElement(By.id("wishlist-total"));
+
         // shoppingCart=driver.findElement(By.partialLinkText("Shopping Cart"));
         // TODO
-        shoppingCart = null;//driver.findElement(By.cssSelector("a:has('.fa.fa-shopping-cart')"));
+
+        //shoppingCart =driver.findElement(By.cssSelector("a:has('.fa.fa-shopping-cart')"));
+
+        shoppingCart = driver.findElement(By.cssSelector("a[title='Shopping Cart']"));
+
         // checkout=driver.findElement(By.partialLinkText("Checkout"));
-        checkout = null; //driver.findElement(By.cssSelector("a:has('.fa.fa-share')"));
+        //checkout = driver.findElement(By.cssSelector("a:has('.fa.fa-share')"));
+
+        checkout = driver.findElement(By.cssSelector("a[title*='Wish List']"));
+
         logo = driver.findElement(By.cssSelector("#logo > a"));
         searchProductField = driver.findElement(By.name("search"));
         searchProductButton = driver.findElement(By.cssSelector(".btn.btn-default.btn-lg"));
