@@ -1,6 +1,7 @@
 package com.softserve.edu.opencart.pages.user;
 
 import com.softserve.edu.opencart.pages.RegexPatterns;
+import com.softserve.edu.opencart.pages.TagAttribute;
 import com.softserve.edu.opencart.tools.NumberUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -199,17 +200,6 @@ public class ProductPage extends ANavigatePanelComponent {
         return getSpecification().getSpecificationBody().getText();
     }
 
-   /* private WebElement getItemFromNavTab(String item) {
-        WebElement result = null;
-        List<WebElement> listNavTab = getNavTab();
-        for (WebElement current : listNavTab) {
-            if (current.getAttribute("href").contains(item)) {
-                result = current;
-            }
-        }
-        return result;
-    }*/
-
     public String getReviewNameField() {
         return getReview().getNameField().getText();
     }
@@ -224,7 +214,7 @@ public class ProductPage extends ANavigatePanelComponent {
         for (WebElement current : rating) {
             if (current.isSelected()) result = current;
         }
-        return result.getAttribute("value");
+        return result.getAttribute(TagAttribute.VALUE.toString());
     }
 
     // set Data
@@ -288,16 +278,16 @@ public class ProductPage extends ANavigatePanelComponent {
         WebElement result = null;
         List<WebElement> listNavTab = getNavTab();
         for (WebElement current : listNavTab) {
-            if (current.getAttribute("href").contains(item)) {
+            if (current.getAttribute(TagAttribute.HREF.toString()).contains(item)) {
                 result = current;
             }
         }
         return result;
     }
 
-    public Description clickDescription() {
+    public void clickDescription() {
         getItemFromNavTab("description").click();
-        return new Description();
+        description = new Description();
     }
 
     public void clickSpecification() {
